@@ -29,19 +29,6 @@ First, we'll create the basic HTML structure. This will include a container for 
                         <p>Hey there! I'm Ashedzi a software developer, nice to meet you.</p>
                     </div>
                 </div>
-                <div class="card2">
-                    <div class="front grid">
-                        <h2>Hover to reveal secret</h2>
-                    </div>
-                    <div class="back grid">
-                        <div class="circle-1"></div>
-                        <p>
-                            Today, i will be teaching you how i to achieve this simple card 
-                            flip effect using just css!! Hope you're excited coz i sure am!!
-                        </p>
-                        <div class="circle-2"></div>
-                    </div>
-                </div>
             </div>
         </main>
 ```
@@ -59,7 +46,8 @@ First, we'll create the basic HTML structure. This will include a container for 
     perspective: 1000px;
 }
 ```
-Why: perspective gives a 3D effect. It controls how far the viewer is from the card, making the flip look more realistic.
+**Explanation:** 
+perspective gives a 3D effect. It controls how far the viewer is from the card, making the flip look more realistic.
 
 ### Positioning and Transforming the Card
 ```css
@@ -77,7 +65,8 @@ Why: perspective gives a 3D effect. It controls how far the viewer is from the c
 }
 
 ```
-Why: transform-style: preserve-3d keeps the 3D effect intact, and transform: rotateY(180deg) rotates the card 
+**Explanation:** 
+- transform-style: preserve-3d keeps the 3D effect intact, and transform: rotateY(180deg) rotates the card 
 when hovered to create the flip.
 
 ### Positioning Front and Back
@@ -91,6 +80,7 @@ when hovered to create the flip.
         backface-visibility: hidden;
     }
 ```
+**Explanation:** 
 - position: absolute stacks the front and back on top of each other.
 - backface-visibility: hidden ensures the back side is hidden when flipped.
 
@@ -103,8 +93,11 @@ when hovered to create the flip.
         text-align: center;
     }
 ```
--Explanation: Initially, the back side is rotated by 180 degrees to keep it hidden. When hovered, 
+**Explanation:** 
+- Initially, the back side is rotated by 180 degrees to keep it hidden. When hovered, 
 both sides flip, showing the back.
+
+**Check out my full code to see how these features were all merged together to get the perfect design**
 
 ## Conclusion
 That's it! You've successfully created a simple and fun card flip animation using just HTML and CSS. 
